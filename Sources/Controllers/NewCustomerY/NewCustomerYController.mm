@@ -123,7 +123,7 @@
      */
     self.theTitleLabel=[[UILabel alloc]initWithFrame:CGRectMake(160, 10, 200, 30)];
     [self.theTitleLabel setCenter:CGPointMake(self.honbuView.frame.size.width/2, 25)];
-    [self.theTitleLabel setText:NSLocalizedString(@"New Customer", @"招募顾客")];
+    [self.theTitleLabel setText:NSLocalizedString(@"New Customer", @"创建账号")];
     [self.theTitleLabel setFont:[UIFont systemFontOfSize:20]];
     [self.theTitleLabel setTextColor:[UIColor colorWithRed:157/255.0 green:153/255.0 blue:190/255.0 alpha:1]];
     [self.theTitleLabel setTextAlignment:(NSTextAlignmentCenter)];
@@ -1070,6 +1070,7 @@
     if([LSDeviceInfo isNetworkOn]){
         [MobClick event:@"NewCustomerSubmit" acc:1];
         NSString* result=[_NewCustomer createCustomer];
+        NSLog(@"submitToServer createCustomer=%@",result);
         //    [cc reset];
         if(result!=nil){
             if([result isEqualToString:@"!_TO_OFFLINE_CUSTOMER_!"]){
@@ -1091,6 +1092,8 @@
             }
         }else{
             //UIUtil::ShowAlert(NSLocalizedString(@"Registered as Failed", @"注册失败"));
+#warning TODO 返回了奇怪的结果。
+            _LogLine();
         }
     }else{
         [MobClick event:@"NewCustomerSubmitOffline" acc:1];
@@ -1104,6 +1107,7 @@
             UIUtil::ShowAlert(NSLocalizedString(@"Offline Task: failed to save the customer info.", @"离线任务：顾客信息保存失败。"));
         }
     }
+    _LogLine();
 }
 -(void)closeView:(id)sender{
     _Log(@"closeView called");

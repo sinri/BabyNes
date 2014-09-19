@@ -79,18 +79,20 @@ static BOOL outSingleModePermitted=NO;
     NSLog(@"Push act[%@] handled.",act);
 }
 +(void)actIntoSingleMode{
-    if (!UIAccessibilityIsGuidedAccessEnabled()) {
-        UIAccessibilityRequestGuidedAccessSession(YES, ^(BOOL didSucceed) {
-            if(didSucceed){
-                NSString*news=@"Have been into Single Mode!";
-                NSLog(@"%@",news);
-                //[PushHandler showStatusBarNews:news];
-            }else{
-                //NSString*news=@"Have failed to be into Single Mode!";
-                //NSLog(@"%@",news);
-                //[PushHandler showStatusBarNews:news];
-            }
-        });
+    if(pushToken){
+        if (!UIAccessibilityIsGuidedAccessEnabled()) {
+            UIAccessibilityRequestGuidedAccessSession(YES, ^(BOOL didSucceed) {
+                if(didSucceed){
+                    NSString*news=@"Have been into Single Mode!";
+                    NSLog(@"%@",news);
+                    //[PushHandler showStatusBarNews:news];
+                }else{
+                    //NSString*news=@"Have failed to be into Single Mode!";
+                    //NSLog(@"%@",news);
+                    //[PushHandler showStatusBarNews:news];
+                }
+            });
+        }
     }
 }
 +(void)actOutSingleMode{

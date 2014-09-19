@@ -127,11 +127,12 @@ static LSCustomer * currentCustomer=nil;
          
          NSRange range = [regex rangeOfFirstMatchInString:string options:0 range:NSMakeRange(0, [string length])];
          if(range.location==NSNotFound){
-         //NSString *result = [string substringWithRange:range];
+             _LogLine();
+             //NSString *result = [string substringWithRange:range];
              if(!isSlient){
                 UIUtil::ShowAlert(NSLocalizedString(@"Mobile is not correct", @"手机号未填写正确"));
              }
-         return NO;
+             return NO;
          }
         
         _LogLine();
@@ -250,8 +251,13 @@ static LSCustomer * currentCustomer=nil;
             }else{
                 NSLog(@"MAIN->register customer not");
                 if(!isSlient)[[[UIAlertView alloc]initWithTitle:@"FAILED" message:newCustomerDict[@"msg"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show];
-                if(newCustomerDict[@"toOffline"]){
+                if(newCustomerDict[@"toOffline"] && [newCustomerDict[@"toOffline"] boolValue]){
+                    _LogLine();
                     return @"!_TO_OFFLINE_CUSTOMER_!";
+                }else{
+                    _LogLine();
+#warning 总之返回的是错的，并且不能放到offline。
+                    return nil;
                 }
             }
         }else{

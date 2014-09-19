@@ -70,7 +70,7 @@
 	logoView.frame = CGRectMake(45, 0, logoView.frame.size.width, logoView.frame.size.height);
 	[self.tabBar addSubview:logoView];
     
-    UIButton *newCustomerButton=[UIButton minorButtonWithTitle:NSLocalizedString(@"New Customer", @"招募顾客") width:120];
+    UIButton *newCustomerButton=[UIButton minorButtonWithTitle:NSLocalizedString(@"New Customer", @"创建账号") width:120];
 	newCustomerButton.center = CGPointMake(self.tabBar.frame.size.width - 10 - 120/2, self.tabBar.frame.size.height / 2);
 	[newCustomerButton addTarget:self action:@selector(newCustomerButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 	[self.tabBar addSubview:newCustomerButton];
@@ -167,6 +167,11 @@
         
     }
     
+    if([PushHandler hasOutSingleModePermitted]){
+        [PushHandler actOutSingleMode];
+    }else{
+        [PushHandler actIntoSingleMode];
+    }
 }
 
 // Called after the view was dismissed, covered or otherwise hidden.

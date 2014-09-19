@@ -13,6 +13,7 @@
 @interface LSDeviceRegister : NSObject
 
 @property NSString * sec_uuid;//From SecureUUID
+@property NSString * device_name;
 @property NSString * store_id;//UNKNOWN
 @property NSString * ipad_number;//UNKNOWN
 @property NSString * manufacturer_id;//UNKNOWN

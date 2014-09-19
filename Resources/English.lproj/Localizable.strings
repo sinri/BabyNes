@@ -379,6 +379,9 @@
 /* Network Cache */
 "Network Cache" = "Network Cache";
 
+/* Network Error */
+"Network Error" = "Network Error";
+
 /* Network error */
 "Network error" = "Network error";
 
@@ -469,6 +472,9 @@
 /* Phone */
 "Phone" = "Phone";
 
+/* Please book products before confirming your order. */
+"Please book products before confirming your order." = "Please book products before confirming your order.";
+
 /* Please check your network status. */
 "Please check your network status." = "Please check your network status.";
 
@@ -537,6 +543,9 @@
 
 /* Reminder */
 "Reminder" = "Reminder";
+
+/* Remove */
+"Remove" = "Remove";
 
 /* Remove Selected Photos */
 "Remove Selected Photos" = "Remove Selected Photos";
@@ -703,8 +712,11 @@
 /* Uknown error: %d */
 "Uknown error: %d" = "Uknown error: %d";
 
-/* Unknown Error */
-"Unknown Error" = "Unknown Error";
+/* Uncertained Exception */
+"Uncertained Exception" = "Uncertained Exception";
+
+/* Unknown Error, please try again later. */
+"Unknown Error, please try again later." = "Unknown Error, please try again later.";
 
 /* Unknown error. */
 "Unknown error." = "Unknown error.";
@@ -736,11 +748,11 @@
 /* Your order has been confirmed, and saved due to offline now. */
 "Your order has been confirmed, and saved due to offline now." = "Your order has been confirmed, and saved due to offline now.";
 
+/* Your order has failed to be confirmed. Reason:%@ */
+"Your order has failed to be confirmed. Reason:%@" = "Your order has failed to be confirmed. Reason:%@";
+
 /* Your order [%@] has been confirmed. */
 "Your order [%@] has been confirmed." = "Your order [%@] has been confirmed.";
-
-/* Your order [%@] has failed to be confirmed. */
-"Your order [%@] has failed to be confirmed." = "Your order [%@] has failed to be confirmed.";
 
 /* ^852$ */
 "^852$" = "^852$";

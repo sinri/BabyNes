@@ -199,14 +199,14 @@ static CGFloat reloadHeaderHeight=30;
     //self.the_customer_seek_button.layer.cornerRadius = 5;
     [self.view addSubview:self.the_customer_seek_button];
     
-    self.the_customer_new_button=[UIButton minorButtonWithTitle:NSLocalizedString(@"New Customer", @"招募顾客") width:150];
+    self.the_customer_new_button=[UIButton minorButtonWithTitle:NSLocalizedString(@"New Customer", @"创建账号") width:150];
     //self.the_customer_new_button =[UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.the_customer_new_button setFrame:CGRectMake(850, 600, 150, 30)];
     //self.the_customer_new_button.titleLabel.font = [UIFont systemFontOfSize: 16.0];
     //self.the_customer_new_button.titleLabel.textColor=[UIColor whiteColor];
     //self.the_customer_new_button.backgroundColor = [UIColor colorWithRed:157/255.0 green:153/255.0 blue:190/255.0 alpha:1];
     //[self.the_customer_new_button setBackgroundImage:UIUtil::ImageWithColor(117, 114, 184) forState:UIControlStateHighlighted];
-    //[self.the_customer_new_button setTitle:NSLocalizedString(@"New Customer", @"招募顾客")  forState:(UIControlStateNormal)];
+    //[self.the_customer_new_button setTitle:NSLocalizedString(@"New Customer", @"创建账号")  forState:(UIControlStateNormal)];
     [self.the_customer_new_button addTarget:self action:@selector(show_new_customer_VC:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.the_customer_new_button setHidden:YES];
     //self.the_customer_new_button.layer.cornerRadius = 5;

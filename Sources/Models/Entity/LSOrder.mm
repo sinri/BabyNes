@@ -177,8 +177,16 @@ static LSOrder * currentOrder=nil;
 -(NSString*)toJson{
     _LogLine();
     NSError * error=nil;
-    NSDictionary * jsonDict=@{@"cart":[self.theCart toJson],
-                              @"customer":[self.theCustomer toJson],
+    NSString*cartJson=[self.theCart toJson];
+    NSString*customerJson=[self.theCustomer toJson];
+    if(!cartJson){
+        UIUtil::ShowAlert(@"Cart Null Error!");
+    }
+    if(!customerJson){
+        UIUtil::ShowAlert(@"Customer Null Error!");
+    }
+    NSDictionary * jsonDict=@{@"cart":cartJson,
+                              @"customer":customerJson,
                               @"date": [NSNumber numberWithLongLong:(long long)self.theCreateTime],
                               @"type":self.theOrderType,
                               @"store_province":self.store_province,

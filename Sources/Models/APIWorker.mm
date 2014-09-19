@@ -223,6 +223,10 @@
     [request setHTTPBody:body];
     [request setHTTPMethod:@"POST"];
     
+    for (id header_field in [[request allHTTPHeaderFields] allKeys]) {
+        NSLog(@"HTTP HEADER: %@=%@",header_field,[[request allHTTPHeaderFields] objectForKey:header_field]);
+    }
+    
     NSURLResponse * response=nil;
     NSError * error=nil;
     

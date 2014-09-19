@@ -242,7 +242,7 @@
 "Failed" = "失敗";
 
 /* Failed due to some issue in server, BabyNes POS is to store customer info offline. */
-"Failed due to some issue in server, BabyNes POS is to store customer info offline." = "由於服務器原因用戶註冊不順利，將離線暫存用戶信息。";
+"Failed due to some issue in server, BabyNes POS is to store customer info offline." = "由於目前服務器異常，將離線暫存用戶信息。";
 
 /* Failed in examine the identification. */
 "Failed in examine the identification." = "身份驗證失敗。";
@@ -379,6 +379,9 @@
 /* Network Cache */
 "Network Cache" = "網絡緩存";
 
+/* Network Error */
+"Network Error" = "網絡錯誤";
+
 /* Network error */
 "Network error" = "網絡連接不給力啊";
 
@@ -469,6 +472,9 @@
 /* Phone */
 "Phone" = "電話號碼";
 
+/* Please book products before confirming your order. */
+"Please book products before confirming your order." = "請選擇商品。";
+
 /* Please check your network status. */
 "Please check your network status." = "請檢查網絡狀態。";
 
@@ -537,6 +543,9 @@
 
 /* Reminder */
 "Reminder" = "提醒";
+
+/* Remove */
+"Remove" = "移除";
 
 /* Remove Selected Photos */
 "Remove Selected Photos" = "移除選中的照片";
@@ -703,8 +712,11 @@
 /* Uknown error: %d */
 "Uknown error: %d" = "未知錯誤，代碼：%d";
 
-/* Unknown Error */
-"Unknown Error" = "未知錯誤";
+/* Uncertained Exception */
+"Uncertained Exception" = "未知的異常";
+
+/* Unknown Error, please try again later. */
+"Unknown Error, please try again later." = "網絡錯誤，請稍後重試";
 
 /* Unknown error. */
 "Unknown error." = "未知錯誤";
@@ -736,15 +748,15 @@
 /* Your order has been confirmed, and saved due to offline now. */
 "Your order has been confirmed, and saved due to offline now." = "您的訂單已經確認，由於離線而被保存。";
 
+/* Your order has failed to be confirmed. Reason:%@ */
+"Your order has failed to be confirmed. Reason:%@" = "您的訂單遞交失敗。原因：%@";
+
 /* Your order [%@] has been confirmed. */
 "Your order [%@] has been confirmed." = "您的訂單【%@】已經確認。";
-
-/* Your order [%@] has failed to be confirmed. */
-"Your order [%@] has failed to be confirmed." = "您的訂單【%@】遞交失敗。";
 
 /* ^852$ */
 "^852$" = "^86$";
 
 /* ^[569][\\d]{7}$ */
-"^[569][\\d]{7}$" = "^1[\\d]{10}$";
+"^[569][\\d]{7}$" = "^1[3456789][\\d]{9}$";
 

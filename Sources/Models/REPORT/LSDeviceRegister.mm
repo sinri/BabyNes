@@ -22,6 +22,7 @@
     self=[super init];
     
     self.sec_uuid=[LSDeviceInfo device_sn];//From SecureUUID
+    self.device_name=[LSDeviceInfo deviceName];
     //self.store_id=@"Unknown";//UNKNOWN
     //self.ipad_number=@"Unknown";//UNKNOWN
     self.manufacturer_id=[LSDeviceInfo identifierForVendor];
@@ -37,10 +38,14 @@
 
 -(BOOL)postDeviceDetails{
     NSString * AT=[DataLoader accessToken];
+    if(AT==nil){
+        AT=@"";
+    }
     NSDictionary* dict=[[NSDictionary alloc]initWithObjectsAndKeys:
                         @"register_device",@"act",
                         AT,@"token",
                         self.sec_uuid,@"sec_uuid",
+                        self.device_name,@"device_name",
                         //self.store_id,@"store_id",
                         //self.ipad_number,@"ipad_number",
                         self.manufacturer_id,@"manufacturer_id",

@@ -242,7 +242,7 @@
 "Failed" = "失败";
 
 /* Failed due to some issue in server, BabyNes POS is to store customer info offline. */
-"Failed due to some issue in server, BabyNes POS is to store customer info offline." = "由于服务器原因用户注册不顺利，将离线暂存用户信息。";
+"Failed due to some issue in server, BabyNes POS is to store customer info offline." = "由于目前服务器异常，将离线暂存用户信息。";
 
 /* Failed in examine the identification. */
 "Failed in examine the identification." = "身份验证失败。";
@@ -379,6 +379,9 @@
 /* Network Cache */
 "Network Cache" = "网络缓存";
 
+/* Network Error */
+"Network Error" = "网络错误";
+
 /* Network error */
 "Network error" = "网络连接不给力啊";
 
@@ -389,7 +392,7 @@
 "Never registered" = "没有记录";
 
 /* New Customer */
-"New Customer" = "招募顾客";
+"New Customer" = "创建账号";
 
 /* New in this version */
 "New in this version" = "更新说明";
@@ -469,6 +472,9 @@
 /* Phone */
 "Phone" = "电话号码";
 
+/* Please book products before confirming your order. */
+"Please book products before confirming your order." = "请选择商品。";
+
 /* Please check your network status. */
 "Please check your network status." = "请检查网络状态。";
 
@@ -537,6 +543,9 @@
 
 /* Reminder */
 "Reminder" = "提醒";
+
+/* Remove */
+"Remove" = "移除";
 
 /* Remove Selected Photos */
 "Remove Selected Photos" = "移除选中的照片";
@@ -703,8 +712,11 @@
 /* Uknown error: %d */
 "Uknown error: %d" = "未知错误，代码：%d";
 
-/* Unknown Error */
-"Unknown Error" = "未知错误";
+/* Uncertained Exception */
+"Uncertained Exception" = "未知的异常";
+
+/* Unknown Error, please try again later. */
+"Unknown Error, please try again later." = "网络错误，请稍后重试";
 
 /* Unknown error. */
 "Unknown error." = "未知错误";
@@ -736,15 +748,15 @@
 /* Your order has been confirmed, and saved due to offline now. */
 "Your order has been confirmed, and saved due to offline now." = "您的订单已经确认，由于离线而被保存。";
 
+/* Your order has failed to be confirmed. Reason:%@ */
+"Your order has failed to be confirmed. Reason:%@" = "您的订单递交失败。原因：%@";
+
 /* Your order [%@] has been confirmed. */
 "Your order [%@] has been confirmed." = "您的订单【%@】已经确认。";
-
-/* Your order [%@] has failed to be confirmed. */
-"Your order [%@] has failed to be confirmed." = "您的订单【%@】递交失败。";
 
 /* ^852$ */
 "^852$" = "^86$";
 
 /* ^[569][\\d]{7}$ */
-"^[569][\\d]{7}$" = "^1[\\d]{10}$";
+"^[569][\\d]{7}$" = "^1[3456789][\\d]{9}$";
 

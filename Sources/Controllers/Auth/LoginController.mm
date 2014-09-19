@@ -150,6 +150,8 @@
 //#endif
     
     [self.view.window setUserInteractionEnabled:YES];
+    
+    
 }
 
 //
@@ -159,12 +161,16 @@
     
     [MobClick endLogPageView:@"LoginController"];
     
+#warning SINRI 0917
+    /*
     if([PushHandler hasOutSingleModePermitted]){
         [PushHandler actOutSingleMode];
     }else{
         [PushHandler actIntoSingleMode];
     }
-	
+	*/
+    [PushHandler actOutSingleMode];
+    
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(keyboardWillShow:)
 												 name:UIKeyboardWillShowNotification
@@ -279,6 +285,13 @@
         return;
     }
     
+    //EMERGENCY OUT SINGLE MODE
+    if([_usernameField.text isEqualToString:@"this is not a drill!"]){
+        //[[[UIAlertView alloc]initWithTitle:@"EMERGENCY" message:@"AS YOUR WILL" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+        [PushHandler actOutSingleMode];
+        exit(0);
+    }
+    
 	Settings::Set(kUsername, _usernameField.text);
 	[UIView animateWithDuration:0.3 animations:^()
 	 {
@@ -313,6 +326,8 @@
                  Settings::Save(kStoreCity,[DataLoader storeCity]);
                  Settings::Save(kStoreAddress,[DataLoader storeAddress]);
              }
+             
+             
              
              //DO REGISTER
              
@@ -356,7 +371,7 @@
                   }
                   //else if(loader.error==DataLoaderEmpty){}
                   else{
-                      info=NSLocalizedString(@"Unknown Error", @"未知错误");
+                      info=NSLocalizedString(@"Unknown Error, please try again later.", @"网络错误，请稍后重试");
                   }
                   UIUtil::ShowAlert(info);
                   _passwordField.text = nil;
